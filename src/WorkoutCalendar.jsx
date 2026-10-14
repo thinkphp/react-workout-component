@@ -148,7 +148,11 @@ const WorkoutCalendar = ({ theme = 'dark', onToggleTheme }) => {
       <header className="wc-header">
         <div className="wc-logo">
           <span className="wc-logo-icon">🏃</span>
-          <span className="wc-logo-text">WorkoutTracker</span>
+          
+<span className="wc-logo-text">
+  WorkoutTracker · An original idea, designed & developed by Adrian Statescu
+</span>
+
         </div>
         <button
           className="theme-toggle"
