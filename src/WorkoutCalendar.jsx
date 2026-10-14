@@ -150,7 +150,7 @@ const WorkoutCalendar = ({ theme = 'dark', onToggleTheme }) => {
           <span className="wc-logo-icon">🏃</span>
           
 <span className="wc-logo-text">
-  WorkoutTracker · An original idea, designed & developed by Adrian Statescu
+  WorkoutTracker 
 </span>
 
         </div>
@@ -220,6 +220,11 @@ const WorkoutCalendar = ({ theme = 'dark', onToggleTheme }) => {
         <span className="legend-item"><span className="legend-dot dot-mid" />Medium (75–150)</span>
         <span className="legend-item"><span className="legend-dot dot-high" />Intense (&gt;150)</span>
       </div>
+      <br/>
+      <span className="legend-dot dot-low">
+Designed & developed by Adrian Statescu
+       </span>
+
 
       {/* ── modal ── */}
       {isModalOpen && (
