@@ -25,10 +25,6 @@
   --text-muted:     #94a3b8;
   --text-faint:     #64748b;
   --logo-gradient:  linear-gradient(135deg, #a78bfa, #60a5fa);
-  --toggle-bg:      rgba(255,255,255,0.08);
-  --toggle-border:  rgba(255,255,255,0.15);
-  --toggle-thumb:   #a78bfa;
-  --toggle-text:    #cbd5e1;
 }
 
 /* ── CSS variables – light ───────────────────────────────────────────── */
@@ -55,10 +51,6 @@
   --text-muted:     #6b7280;
   --text-faint:     #9ca3af;
   --logo-gradient:  linear-gradient(135deg, #7c3aed, #2563eb);
-  --toggle-bg:      rgba(0,0,0,0.06);
-  --toggle-border:  rgba(0,0,0,0.12);
-  --toggle-thumb:   #7c3aed;
-  --toggle-text:    #374151;
 }
 
 body {
@@ -114,52 +106,27 @@ body {
 
 /* ── Theme toggle ────────────────────────────────────────────────────── */
 .theme-toggle {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--toggle-bg);
-  border: 1px solid var(--toggle-border);
-  border-radius: 999px;
-  padding: 0.45rem 1rem 0.45rem 0.5rem;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: var(--bg-btn);
+  border: 1px solid var(--border-btn);
+  border-radius: 50%;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
   font-family: inherit;
 }
 
 .theme-toggle:hover {
-  border-color: var(--toggle-thumb);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--toggle-thumb) 20%, transparent);
+  background: var(--bg-card-hover);
+  border-color: var(--border-stat);
+  transform: translateY(-1px);
 }
 
-.theme-toggle-track {
-  width: 34px;
-  height: 20px;
-  background: color-mix(in srgb, var(--toggle-thumb) 30%, transparent);
-  border-radius: 999px;
-  position: relative;
-  flex-shrink: 0;
-  transition: background 0.25s ease;
-}
-
-.theme-toggle-thumb {
-  position: absolute;
-  top: 3px;
-  width: 14px;
-  height: 14px;
-  background: var(--toggle-thumb);
-  border-radius: 50%;
-  transition: left 0.25s ease;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
-}
-
-[data-theme="dark"]  .theme-toggle-thumb { left: 3px; }
-[data-theme="light"] .theme-toggle-thumb { left: 17px; }
-
-.theme-toggle-label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--toggle-text);
-  white-space: nowrap;
+.theme-toggle-icon {
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 /* ── Stats bar ───────────────────────────────────────────────────────── */

@@ -160,11 +160,8 @@ const WorkoutCalendar = ({ theme = 'dark', onToggleTheme }) => {
           aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
           title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
         >
-          <span className="theme-toggle-track">
-            <span className="theme-toggle-thumb" />
-          </span>
-          <span className="theme-toggle-label">
-            {theme === 'dark' ? '🌙 Dark' : '☀️ Light'}
+          <span className="theme-toggle-icon" aria-hidden="true">
+            {theme === 'dark' ? '☀️' : '🌙'}
           </span>
         </button>
       </header>
